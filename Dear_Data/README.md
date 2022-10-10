@@ -4,7 +4,7 @@ For this project, I collected how much time I spend outside and what places I us
 
 ## Instructions:
 
-![Instructions](fron_instructions.jpg)
+![Instructions](front_instructions.jpg)
 
 ## Postcard:
 
