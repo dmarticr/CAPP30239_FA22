@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Diego Alejandro Martinez Cruz</h1>
 <h3 align="center">2nd year MSCAPP student from Colombia (ID: 12324605)</h3>
 
-- 🌱 I’m currently learning **CAPP30239 Data Visualization for Public Policy**
+- 🌱 This space is dedicated to **CAPP30239 Data Visualization for Public Policy**
 
 - 📫 How to reach me **dmarticr@uchicago.edu**
 
