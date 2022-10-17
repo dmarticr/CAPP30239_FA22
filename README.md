@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Diego Alejandro Martinez Cruz</h1>
-<h3 align="center">2nd year MSCAPP student from :colombia: </h3>
+<h3 align="center">2nd year MSCAPP student</h3>
 
 - 🌱 This space is dedicated to **CAPP30239 Data Visualization for Public Policy**
 
