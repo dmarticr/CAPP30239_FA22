@@ -24,7 +24,7 @@ The original database I will use for my project is the historical record of case
     * THREAT = dummy variable that takes the value of 1 if the event involved threat or intimidation
     * MEDICAL_MISSION = dummy variable that takes the value of 1 if the event involved an attack on a medical mission.
     * CONFINEMENT = dummy variable that takes the value of 1 if the event involved confinement or restriction of mobility.
-    * DISPLACEMENT = dummy variable that takes the value of 1 if the event involved confinement or restriction of mobility.
+    * DISPLACEMENT = dummy variable that takes the value of 1 if the event involved forced displacement.
     * EXTORTION = dummy variable that takes the value of 1 if the event involved extorsion.
     * INJURIES = dummy variable that takes the value of 1 if the event involved civilian injured.
     * PLUNDER = dummy variable that takes the value of 1 if the event involved plunder.
