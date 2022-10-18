@@ -1,10 +1,13 @@
-# Data for the Final Project 📝
+# Week 3
+This week we have learned the basics to build bar charts using D3. In this folder, you can find the files regarding the in-class exercise using Covid data, as well as the homework in which we replicate the exercise with the number of visits to the libraries. Also, This folder includes the data for the final project which is detailed next.
+
+## Data for the Final Project 📝
 
 In 2016, after 4 years of negotiations, Colombia's government signed a Peace Accord with the Revolutionary Armed Forces of Colombia (FARC), one of the Latin American oldest guerrillas. This accord ended five decades of conflict and opened channels of reparation and truth to the victims. In line with the latter, the National Historical Memory Center (HMC) was created to clarify violent acts, dignify the voices of the victims and build sustainable peace in the territories.
 
 During the last few years, the HMC has built an extensive public database that describes the evolution of violence in Colombia in relation to the armed conflict, which can be consulted at this [link](https://micrositios.centrodememoriahistorica.gov.co/observatorio/portal-de-datos/base-de-datos/).
 
-The original database I will use for my project is the historical record of cases of massacres (dta.xlsx; For this class's purposes, I will use dta_t.csv where t stands for translated). The main characteristics of this information are listed below:
+The original database I will use for my project is the historical record of cases of massacres (***dta.xlsx***; For this class's purposes, I will use ***dta_t.csv*** where t stands for translated). The main characteristics of this information are listed below:
 
 * Data Source: Centro Nacional de Memoria Histórica (HMC in English), located in Bogotá, Colombia. [Link](https://centrodememoriahistorica.gov.co/).
 
@@ -43,5 +46,5 @@ The original database I will use for my project is the historical record of case
 * Any concerns about the data: Nothing so far.
 * Identify if source is primary or secondary: It is primary data.
 
-# Bar Chart Exercise 📝
-Also, in this folder, you can find the homework regarding the library visits to the public libraries around the University of Chicago. Please refer to (homework.html)[homework.html] file.
+## Bar Chart Exercise 📝
+Also, in this folder, you can find the homework regarding the library visits to the public libraries around the University of Chicago. Please refer to ***homework.html*** file.
