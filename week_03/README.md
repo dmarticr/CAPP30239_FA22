@@ -1,4 +1,4 @@
-# Data for the Final Project
+# Data for the Final Project 📝
 
 In 2016, after 4 years of negotiations, Colombia's government signed a Peace Accord with the Revolutionary Armed Forces of Colombia (FARC), one of the Latin American oldest guerrillas. This accord ended five decades of conflict and opened channels of reparation and truth to the victims. In line with the latter, the National Historical Memory Center (HMC) was created to clarify violent acts, dignify the voices of the victims and build sustainable peace in the territories.
 
@@ -42,3 +42,6 @@ The original database I will use for my project is the historical record of case
     * Combinations of the previous three.
 * Any concerns about the data: Nothing so far.
 * Identify if source is primary or secondary: It is primary data.
+
+# Bar Chart Exercise 📝
+Also, in this folder, you can find the homework regarding the library visits to the public libraries around the University of Chicago. Please refer to (homework.html)[homework.html] file.
