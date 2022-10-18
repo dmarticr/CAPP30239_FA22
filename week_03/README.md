@@ -1,5 +1,5 @@
 # Week 3
-This week we have learned the basics to build bar charts using D3. In this folder, you can find the files regarding the in-class exercise using Covid data, as well as the homework in which we replicate the exercise with the number of visits to the libraries. Also, This folder includes the data for the final project which is detailed next.
+This week we have learned the basics to build bar charts using D3 📊. In this folder, you can find the files regarding the in-class exercise using Covid data, as well as the homework in which we replicate the exercise with the number of visits to the libraries. Also, This folder includes the data for the final project which is detailed next.
 
 ## Data for the Final Project 📝
 
