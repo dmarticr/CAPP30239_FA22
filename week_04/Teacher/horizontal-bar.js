@@ -6,12 +6,12 @@ d3.csv("covid.csv").then(data => {
         d.cases = +d.cases; //force a number
     };
 
-    data.sort((a, b) => b.cases - a.cases); //sort a, b are dummy variables used by comparison
-    // data.sort((a, b) => d3.ascending(a.country, b.country));  Si quiero orden alfabetico
+    data.sort((a, b) => b.cases - a.cases); // sort cases by number, largest first
+    // data.sort((a, b) => d3.ascending(a.country, b.country)); // alphabatize by country
 
     const height = 600,
           width = 800,
-          margin = ({ top: 25, right: 30, bottom: 55, left: 50 });
+          margin = ({ top: 25, right: 30, bottom: 55, left: 65 });
 
     let svg = d3.select("#horizontal-chart")
         .append("svg")
@@ -22,11 +22,11 @@ d3.csv("covid.csv").then(data => {
         .range([margin.left, width - margin.right]);
     
     let y = d3.scaleBand()
-        .domain(data.map(d => d.country)) // lo q esta en el parentesis es un loop en los datos
+        .domain(data.map(d => d.country))
         .range([margin.top, height - margin.bottom])
         .padding(0.1);
 
-    svg.append("g") // g es parte del html, group element. Esta funcion crea el eje horizontal y le pone los numeros
+    svg.append("g")
         .attr("transform", `translate(0,${height - margin.bottom + 5})`) // move location of axis
         .call(d3.axisBottom(x));
     
@@ -37,7 +37,7 @@ d3.csv("covid.csv").then(data => {
     let bar = svg.selectAll(".bar") // create bar groups
         .append("g")
         .data(data)
-        .join("g") // take data and math to an elemento in the page; in this format
+        .join("g")
         .attr("class", "bar");
 
     bar.append("rect") // add rect to bar group
@@ -56,10 +56,19 @@ d3.csv("covid.csv").then(data => {
         .style('fill', 'white');
 
     svg.append("text")
-        .attr("class","x-label")
-        .attr("text-anchor","end")
-        .attr("x", width - margin.right)
-        .attr("y", height - 5)
-        .text("Country Code");
-
+      .attr("class", "x-label")
+      .attr("text-anchor", "end")
+      .attr("x", width - margin.right)
+      .attr("y", height)
+      .attr("dx", "0.5em") // dx and dy can be used for shifting position
+      .attr("dy", "-0.5em") // see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dy 
+      .text("Country Code");
+    
+    svg.append("text")
+      .attr("class", "y-label")
+      .attr("text-anchor", "end")
+      .attr("x", -margin.left/2)
+      .attr("y", 15)
+      .attr("transform", "rotate(-90)")
+      .text("COVID cases per 100,000");
 });
