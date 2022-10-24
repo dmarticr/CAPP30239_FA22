@@ -20,4 +20,6 @@ Content:
 * [Week 1](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_01) 
 * [Week 2](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_02)
 * [Week 3](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_03)
+* [Week 4](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_04)
+    * [Line Chart Exercise](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_04/homework.html)
 
