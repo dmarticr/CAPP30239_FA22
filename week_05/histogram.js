@@ -42,16 +42,28 @@ d3.json('climate-jan.json').then((data) => { // call data
      .attr("fill", "steelblue") // appending rectangles to each bar of histogram
      //lets create an animation...
      .attr("height", 0)
-     .attr("y", ...)
+     .attr("y", height - margin.bottom)
      .transition()
+     .duration(1000)
      .attr("y", d => y(d.length))
-     .attr("height", d => height - margin.bottom - y(d.length)); // this line was in 41 when static
+     .attr("height", d => height - margin.bottom - y(d.length));
 
-   g.append("text") // add numbers to the top of histagram
+//   g.append("text") // add numbers to the top of histagram
+//     .text(d => d.length)
+//     .attr("x", d => x(d.x0) + (x(d.x1) - x(d.x0)) / 2)
+//     .attr("y", d => y(d.length) - 5)
+//     .attr("text-anchor", "middle")
+//     .attr("fill", "#333");
+
+    g.append("text") // add numbers to the top of histagram
      .text(d => d.length)
      .attr("x", d => x(d.x0) + (x(d.x1) - x(d.x0)) / 2)
      .attr("y", d => y(d.length) - 5)
      .attr("text-anchor", "middle")
-     .attr("fill", "#333");
+     .attr("fill", "#333")
+     .attr("y", height - margin.bottom)
+     .transition()
+     .duration(1000)
+     .attr("y", d => y(d.length) - 5);     
 
 });
