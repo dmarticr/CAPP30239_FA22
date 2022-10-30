@@ -25,4 +25,3 @@ Content:
     * [Line Chart Exercise](https://dmarticr.github.io/CAPP30239_FA22/week_04/homework.html)
 * [Week 5](https://github.com/dmarticr/CAPP30239_FA22/tree/main/week_05)
 * [Final Project](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data)
-
