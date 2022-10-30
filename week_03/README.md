@@ -1,50 +1,28 @@
 # Week 3
-This week we have learned the basics to build bar charts using D3 📊. In this folder, you can find the files regarding the in-class exercise using Covid data, as well as the homework in which we replicate the exercise with the number of visits to the libraries. Also, This folder includes the data for the final project which is detailed next.
-
-## Data for the Final Project 📝
-
-In 2016, after 4 years of negotiations, Colombia's government signed a Peace Accord with the Revolutionary Armed Forces of Colombia (FARC), one of the Latin American oldest guerrillas. This accord ended five decades of conflict and opened channels of reparation and truth to the victims. In line with the latter, the National Historical Memory Center (HMC) was created to clarify violent acts, dignify the voices of the victims and build sustainable peace in the territories.
-
-During the last few years, the HMC has built an extensive public database that describes the evolution of violence in Colombia in relation to the armed conflict, which can be consulted at this [link](https://micrositios.centrodememoriahistorica.gov.co/observatorio/portal-de-datos/base-de-datos/).
-
-The original database I will use for my project is the historical record of cases of massacres (***dta.xlsx***; For this class's purposes, I will use ***dta_t.csv*** where t stands for translated). The main characteristics of this information are listed below:
-
-* Data Source: Centro Nacional de Memoria Histórica (HMC in English), located in Bogotá, Colombia. [Link](https://centrodememoriahistorica.gov.co/).
-
-* Description of data: 4309 observations regarding massacres. Each column is detailed below:
-
-    * ID = Unique identifier.
-    * RELATED_ID = ID from the victim’s dataset that matches the case.
-    * YEAR, MONTH & DAY of the massacre
-    * DPTOMPIO = municipality code (I also have a JSON file -Municipios.json- with the map of Colombia that has these codes too, but it is too big to push it right now and I am currently exploring ways to compress it)
-    * MPIO_CNMBR = municipality name
-    * DEPARTMENT = geographic identity that incorporates the municipalities
-    * REGION = geographic identity that incorporates the departments
-    * MODALITY of the massacre/crime
-    * RESPONSIBLE = identifies the category of the presumed responsible
-    * RESPONSIBLE_DESCRIPTION = specific name of the presumed perpetrator
-    * LAND_DISPOSSESSION = dummy variable that takes the value of 1 if the event involved the abandonment or forced dispossession of land.
-    * THREAT = dummy variable that takes the value of 1 if the event involved threat or intimidation
-    * MEDICAL_MISSION = dummy variable that takes the value of 1 if the event involved an attack on a medical mission.
-    * CONFINEMENT = dummy variable that takes the value of 1 if the event involved confinement or restriction of mobility.
-    * DISPLACEMENT = dummy variable that takes the value of 1 if the event involved forced displacement.
-    * EXTORTION = dummy variable that takes the value of 1 if the event involved extorsion.
-    * INJURIES = dummy variable that takes the value of 1 if the event involved civilian injured.
-    * PLUNDER = dummy variable that takes the value of 1 if the event involved plunder.
-    * TORTURE = dummy variable that takes the value of 1 if the event involved torture.
-    * GENDER_VIOLENCE = dummy variable that takes the value of 1 if the event involved gender-based violence.
-    * SIMULTANEOUS_EVENT = describes another simultaneous event, if it is the case.
-    * VICTIMS = number of victims.
-    * WEAPONS
-    * LAT and LON are geographical coordinates.
-* Why you are interested in this topic: It is a sensitive issue, but I believe that it should be transmitted with the purpose of building a historical memory as a guarantee of non-repetition.
-* Thoughts on how you would hope to use this data & Potential data points: This database allows several uses:
-    * Historical evolution of massacres and number of victims
-    * distribution by type of offenders, and all the dichotomous variables described above.
-    * Geolocation of these cases is also available in the database.
-    * Combinations of the previous three.
-* Any concerns about the data: Nothing so far.
-* Identify if source is primary or secondary: It is primary data.
+This week we have learned the basics to build bar charts using D3 📊. In this folder, you can find the files regarding the in-class exercise using Covid data and the homework in which we replicate the exercise with the number of visits to the libraries. Also, this folder used to include the data for the final project, but it was moved to [CAPP30239_FA22\data](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data) folder with the name [vgsales.csv](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgsales.csv).
 
 ## Bar Chart Exercise 📝
-Also, in this folder, you can find the homework regarding the library visits to the public libraries around the University of Chicago. Please refer to ***homework.html*** file.
+Also, in this folder, you can find the homework regarding the library visits to the public libraries around the University of Chicago. Please refer to the ***homework.html*** file.
+
+## Data for the Final Project 📝
+For my data project, I will use Video Game Sales from more than 16,500 games.
+* *Data Source*: This dataset has been taken from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales), being a scrape of [vgchartz](https://www.vgchartz.com/).
+* *Description of data*: there are 16,598 records. Each column is detailed below:
+    * **Rank**: Ranking of overall sales
+    * **Name**: The games name
+    * **Platform**: Platform of the games release (i.e. PC,PS4, etc.)
+    * **Year**: Year of the game's release
+    * **Genre**: Genre of the game
+    * **Publisher**: Publisher of the game
+    * **NA_Sales**: Sales in North America (in millions)
+    * **EU_Sales**: Sales in Europe (in millions)
+    * **JP_Sales**: Sales in Japan (in millions)
+    * **Other_Sales**: Sales in the rest of the world (in millions)
+    * **Global_Sales**: Total worldwide sales.
+* *Why you are interested in this topic*: It is an important industry not only because of its size but because of its cultural influence. And this particular database allows me to explore its evolution over time, as well as different elements such as the most popular genres and the best-selling video games.
+* *Thoughts on how you would hope to use this data & Potential data points*: This database allows several uses:
+    * Historical evolution of sales per platform, region, publisher, and genre.
+    * Distribution of total sales across time per same characteristics.
+    * Ranking of best-sellers (may be combined with distribution across markets, like a horizontal stacked bar chart).
+* Any concerns about the data: Nothing so far.
+* Identify if the source is primary or secondary: It is primary data because it is first-hand data gathered by the authors through the scraping code (provided).
