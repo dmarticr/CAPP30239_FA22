@@ -30,7 +30,7 @@ d3.json('climate-jan.json').then((data) => { // call data
     .thresholds(10) // treshold : # bars (approx)
     .value(d => d.average)(data); // Value you wan to use to populate bins
 
-  let g = binGroups.selectAll("g")
+  let g = binGroups.selectAll("g") // select all g's and append all the g's
     .data(bins)
     .join("g");
 

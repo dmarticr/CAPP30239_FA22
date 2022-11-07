@@ -55,20 +55,20 @@ let timeParse = d3.timeParse("%Y-%m")                         //transform string
       .text("Interest rate");
 
     let line = d3.line()                                     //Creates the line of the graph
-        .x(d => x(d.Month))
-        .y(d => y(d.Num));
+      .x(d => x(d.Month))
+      .y(d => y(d.Num));
     
     svg.append("path")
-        .datum(data)
-        .attr("d", line)
-        .attr("fill", "none")
-        .attr("stroke", "steelblue");
+      .datum(data)
+      .attr("d", line)
+      .attr("fill", "none")
+      .attr("stroke", "steelblue");
 
     svg.selectAll(".dot")                                    //This code creates dots for each data point
-        .data(data.filter(function(d) { return d; }))
-        .enter().append("circle")
-          .attr("class", "dot")
-          .attr("cx", line.x())
-          .attr("cy", line.y())
-          .attr("r", 3);                                    //Size of each dot
+      .data(data.filter(function(d) { return d; }))
+      .enter().append("circle")
+      .attr("class", "dot")
+      .attr("cx", line.x())
+      .attr("cy", line.y())
+      .attr("r", 3);                                    //Size of each dot
   });
