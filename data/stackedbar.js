@@ -1,3 +1,5 @@
+let sourceHTML = `<p style="background-color:black; color: white; text-align:center">Data Source: <a href="https://www.vgchartz.com" target="_blank" rel="noopener noreferrer">VGChartz</a></p>`;
+
 d3.csv("g11.csv").then( function(data) {
 
 	// set the dimensions and margins of the graph
@@ -103,22 +105,21 @@ svg.selectAll("mylabels")
 	.style("font-size","15px")
 	.on("mouseover", function (event,d) { // What happens when user hover a bar
 
-          // what subgroup are we hovering?
-          const subGroupName = d3.select(this.parentNode).datum().key
+		// what subgroup are we hovering?
+		const subGroupName = d3.select(this.parentNode).datum().key
 
-          // Reduce opacity of all rect to 0.2
-          d3.selectAll(".myRect").style("opacity", 0.2)
+		// Reduce opacity of all rect to 0.2
+		d3.selectAll(".myRect").style("opacity", 0.2)
 
-          // Highlight all rects of this subgroup with opacity 1. It is possible to select them since they have a specific class = their name.
-          d3.selectAll("." + subGroupName).style("opacity",1) 
+		// Highlight all rects of this subgroup with opacity 1. It is possible to select them since they have a specific class = their name.
+		d3.selectAll("." + subGroupName).style("opacity",1) 
+	})
+	.on("mouseleave", function (event,d) { // When user do not hover anymore
 
-      })
-      .on("mouseleave", function (event,d) { // When user do not hover anymore
-
-          // Back to normal opacity: 1
-          d3.selectAll(".myRect")
-            .style("opacity",1)
-      });
+		// Back to normal opacity: 1
+		d3.selectAll(".myRect")
+		.style("opacity",1)
+	});
 
   // ----------------
   // Highlight a specific subgroup when hovered
@@ -126,40 +127,45 @@ svg.selectAll("mylabels")
 
   // Show the bars
   svg.append("g")
-      .selectAll("g")
+	.selectAll("g")
 
-      // Enter in the stack data = loop key per key = group per group
-      .data(stackedData)
-      .join("g")
-      .attr("fill", d => color(d.key))
-      .attr("class", d => "myRect " + d.key ) // Add a class to each subgroup: their name
-      .selectAll("rect")
+	// Enter in the stack data = loop key per key = group per group
+	.data(stackedData)
+	.join("g")
+	.attr("fill", d => color(d.key))
+	.attr("class", d => "myRect " + d.key ) // Add a class to each subgroup: their name
+	.selectAll("rect")
 
-      // enter a second time = loop subgroup per subgroup to add all rectangles
-      .data(d => d)
-      .join("rect")
-      .attr("x", d => x(d.data.Year))
-      .attr("y", d => y(d[1]))
-      .attr("height", d => y(d[0]) - y(d[1]))
-      .attr("width", x.bandwidth())
-      .attr("stroke", "black")
-      .on("mouseover", function (event,d) { // What happens when user hover a bar
+	// enter a second time = loop subgroup per subgroup to add all rectangles
+	.data(d => d)
+	.join("rect")
+	.attr("x", d => x(d.data.Year))
+	.attr("y", d => y(d[1]))
+	.attr("height", d => y(d[0]) - y(d[1]))
+	.attr("width", x.bandwidth())
+	.attr("stroke", "black")
+	.on("mouseover", function (event,d) { // What happens when user hover a bar
 
-          // what subgroup are we hovering?
-          const subGroupName = d3.select(this.parentNode).datum().key
+		// what subgroup are we hovering?
+		const subGroupName = d3.select(this.parentNode).datum().key
 
-          // Reduce opacity of all rect to 0.2
-          d3.selectAll(".myRect").style("opacity", 0.2)
+		// Reduce opacity of all rect to 0.2
+		d3.selectAll(".myRect").style("opacity", 0.2)
 
-          // Highlight all rects of this subgroup with opacity 1. It is possible to select them since they have a specific class = their name.
-          d3.selectAll("." + subGroupName).style("opacity",1) 
+		// Highlight all rects of this subgroup with opacity 1. It is possible to select them since they have a specific class = their name.
+		d3.selectAll("." + subGroupName).style("opacity",1) 
  
 
-      })
-      .on("mouseleave", function (event,d) { // When user do not hover anymore
+	})
 
-          // Back to normal opacity: 1
-          d3.selectAll(".myRect")
-            .style("opacity",1)
-      })
+	.on("mouseleave", function (event,d) { // When user do not hover anymore
+
+	// Back to normal opacity: 1
+	d3.selectAll(".myRect")
+		.style("opacity",1)
+	})
+	
+	d3.select("#stackedbar")
+		.append("div")
+		.html(sourceHTML);
 })

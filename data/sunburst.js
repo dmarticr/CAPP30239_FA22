@@ -141,4 +141,8 @@ function render(data) {
 		const y = (d.y0 + d.y1) / 2 * radius;
 		return `rotate(${x - 90}) translate(${y},0) rotate(${x < 180 ? 0 : 180})`;
   	};
+
+	d3.select("#sunburst")
+		.append("div")
+		.html(sourceHTML);
 };

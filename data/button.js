@@ -107,3 +107,7 @@ svg.append("text")
 
  // Initialize the plot with the first dataset
  update(data1)
+
+d3.select("#button_chart")
+	.append("div")
+	.html(sourceHTML);
