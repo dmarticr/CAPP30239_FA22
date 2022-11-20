@@ -46,7 +46,7 @@ d3.csv("g11.csv").then( function(data) {
 		.attr("dy", "-0.5em")
 		.style("font-size", "15px")
 		.text("Year")
-		.style('fill', 'purple');
+		.style('fill', '#fddaec');
 
 	// Add Y axis
 	const y = d3.scaleLinear()
@@ -68,12 +68,12 @@ d3.csv("g11.csv").then( function(data) {
 		.attr("transform", "rotate(-90)")
 		.style("font-size","15px")
 		.text("US Millions")
-		.style('fill', 'purple');
+		.style('fill', '#fddaec');
 
 	// color palette = one color per subgroup
 	const color = d3.scaleOrdinal()
                   	.domain(subgroups)
-                 	.range(d3.schemeSet3);
+                 	.range(d3.schemePastel2);
 					//.range(["#bf5b17", "#7fc97f","#f0027f","#ccc","#666666","#386cb0","#fdc086","#beaed4"]);
 
 	//stack the data? --> stack per subgroup
@@ -142,7 +142,7 @@ svg.selectAll("mylabels")
       .attr("y", d => y(d[1]))
       .attr("height", d => y(d[0]) - y(d[1]))
       .attr("width", x.bandwidth())
-      .attr("stroke", "white")
+      .attr("stroke", "black")
       .on("mouseover", function (event,d) { // What happens when user hover a bar
 
           // what subgroup are we hovering?

@@ -49,7 +49,7 @@ svg.append("text")
 	.attr("transform", "rotate(-90)")
 	.style("font-size","15px")
 	.text("US Millions")
-	.style('fill', 'purple');
+	.style('fill', '#fddaec');
 	
  // Initialize the X axis
  const x = d3.scaleBand()

@@ -18,7 +18,7 @@ function render(data) {
 		height = 700,
 		radius = Math.min(width, height) / 6;
 
-	const color = d3.scaleOrdinal(d3.quantize(d3.interpolateRainbow, data.children.length + 1));
+	const color = d3.scaleOrdinal().range(d3.schemePastel1);
 		
 	const arc = d3.arc()
 		.startAngle(d => d.x0)
@@ -70,6 +70,7 @@ function render(data) {
 		.attr("text-anchor", "middle")
 		.style("font-size", "20px")
 		.style("font-weight", "bold")
+		.style('fill', 'white')
 		.text(root.current.data.name);
 
 	const label = g.append("g")
@@ -83,7 +84,8 @@ function render(data) {
 		.attr("fill-opacity", d => +labelVisible(d.current))
 		.attr("transform", d => labelTransform(d.current))
 		.text(d => d.data.name)
-		.style("font-size","16px");
+		.style("font-size","16px")
+		.style('fill', 'white');
 
 	const parent = g.append("circle")
 		.datum(root)
