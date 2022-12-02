@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project: Nintendo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Changa:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Changa', sans-serif;
+            background-color:black;
+            color: white;
+        }
+        .container {
+            max-width: 1000px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        .flex-container { /* hace las caitas, los items son los elementos (de a 2)*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: normal;
+            align-items: normal;
+            align-content: normal;
+            column-gap: 40px;
+            margin: 60px 0px;
+        }
+        .flex-item {
+            display: block;
+            flex-grow: 0;
+            flex-shrink: 1;
+            flex-basis: auto;
+            align-self: auto;
+            order: 0;
+            width: 50%; /* cada elemento en la cajita tiene el 50% */
+        }
+        .float-left {
+            float: left;
+            width: 50%;
+        }
+        text {
+            font-family: 'Changa', sans-serif;
+            font-size: 10px;
+        }
+        hr {
+            margin: 60px 0;
+        }
+        .chart p {
+            background: white;
+            padding: 5px 0px 5px 10px;
+            margin-right: 10px;
+            color:black;
+        }
+        #divergingChart text {
+            font-size: 14px;
+        }
+        
+        .button {
+            position:relative;
+            left: 200px;
+            top: -400px;
+            display: inline-block;
+            padding: 8px 8px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: black;
+            font-weight:'bold';
+            background-color: #fb9a99;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 9px #999;
+        }
+        
+        .button:hover {background-color: #e67473}
+        
+        .button:active {
+            background-color: #e67473;
+            box-shadow: 0 3px #666;
+            transform: translateY(4px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Videogame Industry and the history of Nintendo
+        </h1>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h2 style="color:#fddaec">
+                    Insights about History
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit impedit odio illo. Incidunt soluta, maiores natus quam illo nulla cumque numquam et tempore eum! Tempore soluta repellendus natus atque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit impedit odio illo. Incidunt soluta, maiores natus quam illo nulla cumque numquam et tempore eum! Tempore soluta repellendus natus atque.</p>
+            </div>
+            <div id="stackedbar" class="flex-item chart">
+            </div>
+            </div>
+
+        </div>
+        <div id="sunburst" style="text-align:center">
+        </div>
+        <div class="flex-container">
+            <div id="button_chart" class="flex-item chart">
+                <button class="button" onclick="update(data3)">Genre</button>
+                <button class="button" onclick="update(data4)">Region</button>
+            </div>
+            <div class="flex-item">
+                <h2 style="color:#fddaec">
+                    Something interesting here
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit impedit odio illo. Incidunt soluta, maiores natus quam illo nulla cumque numquam et tempore eum! Tempore soluta repellendus natus atque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis odit impedit odio illo. Incidunt soluta, maiores natus quam illo nulla cumque numquam et tempore eum! Tempore soluta repellendus natus atque.</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="stackedbar copy.js"></script>
+    <script src="sunburst.js"></script>
+    <script src="button.js"></script>
+</body>
+</html>

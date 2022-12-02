@@ -1,22 +1,10 @@
 let sourceHTML = `<p style="background-color:black; color: white; text-align:center">Data Source: <a href="https://www.vgchartz.com" target="_blank" rel="noopener noreferrer">VGChartz</a></p>`;
 let color_palete = ["#F806CC","#FAEA48","#3330E4","#72FFFF","#FF8624","#9900F0","#00FFC6","#E8FFC2","#FF1700","#06FF00","#EEEEEE"]
-let titles_color =  '#B4AEE8'
-let color_button_chart = "#FF577F"
 
-d3.select("#d1").on("click", function() {
-	stacked_bar_fn("g11.csv");
-	sunburst_fn('tree.json');
-});
-
-d3.select("#d2").on("click", function() {
-	stacked_bar_fn("g11_alt.csv");
-	sunburst_fn('tree_alt.json');
-});
-
-function stacked_bar_fn(file) {
-	d3.select("#stackedbar > *").remove();
+function graphget(file) {
+	d3.select("svg").remove();
 	// set the dimensions and margins of the graph
-	const margin = {top: 30, right: 30, bottom: 35, left: 70},
+	const margin = {top: 10, right: 30, bottom: 35, left: 70},
 		width =  600 - margin.left - margin.right,
 		height = 400 - margin.top - margin.bottom;
 
@@ -27,16 +15,6 @@ function stacked_bar_fn(file) {
 		.attr("height", height + margin.top + margin.bottom)
 		.append("g")
 		.attr("transform", `translate(${margin.left},${margin.top})`);
-
-	// Add Title
-	svg.append("text")
-		.attr("x", (width + margin.left + margin.right) / 3.8)
-		.attr("y", -10)
-		.attr("text-anchor", "middle")
-		.style("font-size", "25px")
-		.style('fill', titles_color)
-		.attr('font-weight','bold')
-		.text("Sales by Release Year");
 
 	// Add X axis
 	const x = d3.scaleBand()
@@ -67,20 +45,21 @@ function stacked_bar_fn(file) {
 		.attr("dy", "-0.5em")
 		.style("font-size", "15px")
 		.text("Year")
-		.style('fill', titles_color);
+		.style('fill', '#fddaec');
 	
 	svg.append("text")
 		.attr("class", "y-label")
 		.attr("text-anchor", "end")
-		.attr("x", margin.top - 20)
+		.attr("x", margin.top)
 		.attr("dx", "-0.5em")
 		.attr("y", -50)
 		.attr("transform", "rotate(-90)")
 		.style("font-size","15px")
 		.text("US Millions")
-		.style('fill', titles_color);
+		.style('fill', '#fddaec');
 	
 	d3.csv(file).then( function(data) {
+
 		// List of subgroups = header of the csv files
 		const subgroups = data.columns.slice(1)
 
@@ -133,7 +112,10 @@ function stacked_bar_fn(file) {
 			.attr('font-weight','bold')
 			.style("font-size","15px");
 
+		// ----------------
 		// Highlight a specific subgroup when hovered
+		// ----------------
+
 		var mouseover = function(d) {
 			// what subgroup are we hovering?
 			const subGroupName = d3.select(this.parentNode).datum().key
@@ -148,6 +130,8 @@ function stacked_bar_fn(file) {
 			// When user do not hover anymore
 			// Back to normal opacity: 1
 			d3.selectAll(".myRect").style("opacity", 1.0)
+			d3.selectAll(".mydots").style("fill-opacity", 1.0)
+			d3.selectAll(".mylabels").style("opacity", 1.0)
 		};
 
 		// Show the bars
@@ -159,13 +143,15 @@ function stacked_bar_fn(file) {
 			.attr("fill", d => color(d.key))
 			.attr("class", d => "myRect " + d.key ) // Add a class to each subgroup: their name
 			.selectAll("rect")
+			//.transition()
+            //.duration(750)
 			// enter a second time = loop subgroup per subgroup to add all rectangles
 			.data(d => d)
 			.join("rect")
 			.attr("x", d => x(d.data.Year))
 			.attr("y", d => y(d[1]))
-			//.transition()
-			//.duration(900)
+			.transition()
+			.duration(900)
 			.attr("height", d => y(d[0]) - y(d[1]))
 			.attr("width", x.bandwidth())
 			.attr("stroke", "black")
@@ -174,7 +160,7 @@ function stacked_bar_fn(file) {
 	})
 }
 
-stacked_bar_fn('g11.csv')
+graphget('g11.csv')
 
 d3.select("#left")
 	.append("div")

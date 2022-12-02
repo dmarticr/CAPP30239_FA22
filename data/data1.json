@@ -1,0 +1,70 @@
+[
+    {
+        "group": "Action",
+        "value": 54.09
+    },
+    {
+        "group": "Action-Adventure",
+        "value": 230.18
+    },
+    {
+        "group": "Adventure",
+        "value": 140.59
+    },
+    {
+        "group": "Education",
+        "value": 0.09
+    },
+    {
+        "group": "Fighting",
+        "value": 158.15
+    },
+    {
+        "group": "Misc",
+        "value": 240.31
+    },
+    {
+        "group": "Music",
+        "value": 13.64
+    },
+    {
+        "group": "Party",
+        "value": 171.75
+    },
+    {
+        "group": "Platform",
+        "value": 1106.15
+    },
+    {
+        "group": "Puzzle",
+        "value": 661.05
+    },
+    {
+        "group": "Racing",
+        "value": 387.49
+    },
+    {
+        "group": "Role-Playing",
+        "value": 923.43
+    },
+    {
+        "group": "Sandbox",
+        "value": 2.2
+    },
+    {
+        "group": "Shooter",
+        "value": 118.6
+    },
+    {
+        "group": "Simulation",
+        "value": 259.08
+    },
+    {
+        "group": "Sports",
+        "value": 405.29
+    },
+    {
+        "group": "Strategy",
+        "value": 51.06
+    }
+]

@@ -1,4 +1,4 @@
-const data1 = [
+const data3 = [
 	{group: 'Action', value: 54.09},
 	{group: 'Action-Adventure', value: 230.18},
 	{group: 'Adventure', value: 140.59},
@@ -18,7 +18,7 @@ const data1 = [
 	{group: 'Strategy', value: 51.06}
 ];
  
-const data2 = [
+const data4 = [
 	{group: 'North America', value: 3377.38},
 	{group: 'Europe', value: 1934.83},
 	{group: 'Japan', value: 686.1500000000001},
@@ -27,7 +27,7 @@ const data2 = [
 ];
  
 // set the dimensions and margins of the graph
-const margin = {top: 80, right: 30, bottom: 100, left: 65},
+const margin = {top: 30, right: 30, bottom: 120, left: 65},
 	width = 460 - margin.left - margin.right,
 	height = 460 - margin.top - margin.bottom;
 
@@ -41,25 +41,16 @@ const svg = d3.select("#button_chart")
 	.attr('font-weight','bold');
 
 svg.append("text")
-	.attr("x", (width + margin.left + margin.right) / 2.4)
-	.attr("y", -25)
-	.attr("text-anchor", "middle")
-	.style("font-size", "25px")
-	.style('fill', titles_color)
-	.attr('font-weight','bold')
-	.text("Total Sales by Category");
-
-svg.append("text")
 	.attr("class", "y-label")
 	.attr("text-anchor", "end")
-	.attr("x", margin.top - 70)
+	.attr("x", margin.top - 25)
 	.attr("dx", "-0.5em")
 	.attr("y", -55)
 	.attr("transform", "rotate(-90)")
 	.style("font-size", "15px")
 	.style("font-weight", "normal")
 	.text("US Millions")
-	.style('fill', titles_color);
+	.style('fill', '#fddaec');
 	
 // Initialize the X axis
 const x = d3.scaleBand()
@@ -103,19 +94,18 @@ function update(data) {
 	var u = svg.selectAll("rect")
 	 	.data(data)
  
-	// Add a new rect for each new elements
-   	u.join("rect")
+   	u.join("rect") // Add a new rect for each new elements
 		.transition()
 		.duration(1000)
 		.attr("x", d => x(d.group))
 		.attr("y", d => y(d.value))
 		.attr("width", x.bandwidth())
 		.attr("height", d => height - y(d.value))
-		.attr("fill", color_button_chart);
+		.attr("fill", "#00FFC6");
 }
 
-// Initialize the plot with the first dataset
-update(data1)
+ // Initialize the plot with the first dataset
+update(data3)
 
 d3.select("#button_chart")
 	.append("div")
