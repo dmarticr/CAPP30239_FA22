@@ -1,29 +1,28 @@
 const data1 = [
-	{group: 'Action', value: 54.09},
-	{group: 'Action-Adventure', value: 230.18},
-	{group: 'Adventure', value: 140.59},
-	{group: 'Education', value: 0.09},
-	{group: 'Fighting', value: 158.15},
-	{group: 'Misc', value: 240.31},
-	{group: 'Music', value: 13.64},
-	{group: 'Party', value: 171.75},
-	{group: 'Platform', value: 1106.15},
-	{group: 'Puzzle', value: 661.05},
-	{group: 'Racing', value: 387.49},
-	{group: 'Role-Playing', value: 923.43},
-	{group: 'Sandbox', value: 2.2},
-	{group: 'Shooter', value: 118.6},
-	{group: 'Simulation', value: 259.08},
-	{group: 'Sports', value: 405.29},
-	{group: 'Strategy', value: 51.06}
+	{'group': 'Action', 'value': 44.77},
+	{'group': 'Action-Adventure', 'value': 68.71},
+	{'group': 'Adventure', 'value': 123.59},
+	{'group': 'Education', 'value': 0.09},
+	{'group': 'Fighting', 'value': 88.05},
+	{'group': 'Misc', 'value': 196.51},
+	{'group': 'Music', 'value': 8.59},
+	{'group': 'Party', 'value': 50.12},
+	{'group': 'Platform', 'value': 552.89},
+	{'group': 'Puzzle', 'value': 101.59},
+	{'group': 'Racing', 'value': 207.79},
+	{'group': 'Role-Playing', 'value': 420.54},
+	{'group': 'Shooter', 'value': 86.62},
+	{'group': 'Simulation', 'value': 133.89000000000001},
+	{'group': 'Sports', 'value': 236.52},
+	{'group': 'Strategy', 'value': 31.060000000000002}
 ];
  
 const data2 = [
-	{group: 'North America', value: 3377.38},
-	{group: 'Europe', value: 1934.83},
-	{group: 'Japan', value: 686.1500000000001},
-	{group: 'Other', value: 657.7800000000001},
-	{group: 'Unclassified', value: 19034.140000000003}
+	{'group': 'North America', 'value': 3377.379999999999},
+	{'group': 'Europe', 'value': 1934.8300000000002},
+	{'group': 'Japan', 'value': 686.15},
+	{'group': 'Other', 'value': 657.78},
+	{'group': 'Unclassified', 'value': 4700.5199999999995}
 ];
  
 // set the dimensions and margins of the graph

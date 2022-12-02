@@ -48,7 +48,7 @@ function stacked_bar_fn(file) {
 
 	// Add Y axis
 	const y = d3.scaleLinear()
-              	.domain([0, 1600])
+              	.domain([0, 800])
              	.range([height, 0 ]);
 
 	const yAxis = svg.append("g")

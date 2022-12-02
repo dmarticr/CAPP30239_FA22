@@ -1,22 +1,22 @@
 [
     {
         "group": "North America",
-        "value": 3377.38
+        "value": 3377.379999999999
     },
     {
         "group": "Europe",
-        "value": 1934.83
+        "value": 1934.8300000000002
     },
     {
         "group": "Japan",
-        "value": 686.1500000000001
+        "value": 686.15
     },
     {
         "group": "Other",
-        "value": 657.7800000000001
+        "value": 657.78
     },
     {
         "group": "Unclassified",
-        "value": 19034.140000000003
+        "value": 4700.5199999999995
     }
 ]

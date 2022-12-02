@@ -143,7 +143,7 @@ function sunburst_fn(file) {
 		};
 
 		function labelVisible(d) {
-			return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.05;
+			return d.y1 <= 3 && d.y0 >= 1 && (d.y1 - d.y0) * (d.x1 - d.x0) > 0.08;
 		};
 
 		function labelTransform(d) {

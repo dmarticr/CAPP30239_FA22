@@ -1,15 +1,15 @@
 [
     {
         "group": "Action",
-        "value": 54.09
+        "value": 44.77
     },
     {
         "group": "Action-Adventure",
-        "value": 230.18
+        "value": 68.71
     },
     {
         "group": "Adventure",
-        "value": 140.59
+        "value": 123.59
     },
     {
         "group": "Education",
@@ -17,54 +17,50 @@
     },
     {
         "group": "Fighting",
-        "value": 158.15
+        "value": 88.05
     },
     {
         "group": "Misc",
-        "value": 240.31
+        "value": 196.51
     },
     {
         "group": "Music",
-        "value": 13.64
+        "value": 8.59
     },
     {
         "group": "Party",
-        "value": 171.75
+        "value": 50.12
     },
     {
         "group": "Platform",
-        "value": 1106.15
+        "value": 552.89
     },
     {
         "group": "Puzzle",
-        "value": 661.05
+        "value": 101.59
     },
     {
         "group": "Racing",
-        "value": 387.49
+        "value": 207.79
     },
     {
         "group": "Role-Playing",
-        "value": 923.43
-    },
-    {
-        "group": "Sandbox",
-        "value": 2.2
+        "value": 420.54
     },
     {
         "group": "Shooter",
-        "value": 118.6
+        "value": 86.62
     },
     {
         "group": "Simulation",
-        "value": 259.08
+        "value": 133.89000000000001
     },
     {
         "group": "Sports",
-        "value": 405.29
+        "value": 236.52
     },
     {
         "group": "Strategy",
-        "value": 51.06
+        "value": 31.060000000000002
     }
 ]
