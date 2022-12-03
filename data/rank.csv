@@ -1,0 +1,31 @@
+Rank,Name,Sales,Genre,Publisher,Developer,Year,Flag
+1,Tetris,496.4,Puzzle,Nintendo  ,Alexey Pajitnov  ,1989,Yes
+2,Pokemon,440.5,Role-Playing,Nintendo  ,Game Freak  ,1998,Yes
+3,Call of Duty,400.0,Shooter,Activision  ,Infinity Ward  ,2003,No
+4,Super Mario,394.47,Platform,Nintendo  ,Nintendo  ,1983,Yes
+5,Grand Theft Auto,380.0,Action-Adventure,Rockstar Games  ,Rockstar North  ,1998,No
+6,FIFA,325.0,Sports,EA Sports  ,Extended Play Productions (1991-1997)  ,1993,No
+7,Minecraft,238.0,Sandbox,Mojang  ,Mojang  ,2011,No
+8,Minecraft,238.0,Action-Adventure,Mojang  ,Mojang AB  ,2011,No
+9,Lego,203.22,Action-Adventure,Mindscape  ,TT Fusion  ,1997,No
+10,The Sims,200.0,Simulation,Electronic Arts  ,Maxis  ,2000,No
+11,Final Fantasy,173.0,Role-Playing,Square  ,Square  ,1987,No
+12,Grand Theft Auto V,170.0,Action-Adventure,Rockstar Games  ,Rockstar North  ,2013,No
+13,Mario Kart,168.23,Racing,Nintendo  ,Nintendo  ,1992,Yes
+14,Assassin's Creed,155.0,Action-Adventure,Ubisoft  ,Ubisoft  ,2007,No
+15,Need for Speed,150.0,Racing,Electronic Arts  ,EA Black Box  ,1994,No
+16,Tomb Raider,141.0,Action-Adventure,Eidos Interactive  ,Core Design  ,1996,No
+17,Resident Evil,131.0,Action-Adventure,Capcom  ,Capcom  ,1996,No
+18,Madden NFL,130.0,Sports,Electronic Arts  ,Park Place Productions  ,1988,No
+19,NBA 2K,125.0,Sports,Sega  ,Visual Concepts  ,1999,No
+20,The Legend of Zelda,123.44,Action-Adventure,Nintendo  ,Nintendo  ,1987,Yes
+21,Wii Sports,120.88,Sports,Nintendo  ,Nintendo  ,2006,Yes
+22,Pro Evolution Soccer/eFootball,112.5,Sports,Konami  ,Konami  ,1995,No
+23,Monster Hunter,88.0,Role-Playing,Capcom  ,Capcom  ,2004,No
+24,Sonic the Hedgehog,86.84,Platform,Sega  ,Sonic Team  ,1991,No
+25,Dragon Quest,85.0,Role-Playing,Square  ,ArtePiazza  ,1986,No
+26,Wii Sports,82.9,Sports,Nintendo  ,Nintendo EAD  ,2006,Yes
+27,Halo,81.0,Shooter,Microsoft Game Studios  ,Bungie  ,2001,No
+28,Gran Turismo,80.4,Racing,Sony Computer Entertainment  ,Polyphony Digital  ,1998,No
+29,Battlefield,78.9,Shooter,Electronic Arts  ,EA DICE  ,2002,No
+30,Borderlands,75.0,Shooter,2K Games  ,Gearbox Software  ,2009,No

@@ -155,7 +155,3 @@ function sunburst_fn(file) {
 };
 
 sunburst_fn('tree.json')
-
-d3.select("#down")
-	.append("div")
-	.html(sourceHTML);

@@ -16,9 +16,9 @@ d3.select("#d2").on("click", function() {
 function stacked_bar_fn(file) {
 	d3.select("#stackedbar > *").remove();
 	// set the dimensions and margins of the graph
-	const margin = {top: 30, right: 30, bottom: 35, left: 70},
-		width =  600 - margin.left - margin.right,
-		height = 400 - margin.top - margin.bottom;
+	const margin = {top: 30, right: 0, bottom: 45, left: 65},
+		width =  620 - margin.left - margin.right,
+		height = 550 - margin.top - margin.bottom;
 
 	// append the svg object to the body of the page
 	const svg = d3.select("#stackedbar")
@@ -53,19 +53,19 @@ function stacked_bar_fn(file) {
 
 	const yAxis = svg.append("g")
 		.call(d3.axisLeft(y).tickFormat(d => "$" + d))
-		.attr('font-weight','bold')
+		//.attr('font-weight','bold')
 		.selectAll("text")
-		.style("font-size", "12px");
+		.style("font-size", "16px");
 
 	// Text of axis
 	svg.append("text")                  
 		.attr("class", "x-label")
 		.attr("text-anchor", "end")
-		.attr("x", width - 210)
-		.attr("y", height + 40)
+		.attr("x", width - 265)
+		.attr("y", height + 50)
 		.attr("dx", "0.5em")
 		.attr("dy", "-0.5em")
-		.style("font-size", "15px")
+		.style("font-size", "16px")
 		.text("Year")
 		.style('fill', titles_color);
 	
@@ -74,9 +74,9 @@ function stacked_bar_fn(file) {
 		.attr("text-anchor", "end")
 		.attr("x", margin.top - 20)
 		.attr("dx", "-0.5em")
-		.attr("y", -50)
+		.attr("y", -55)
 		.attr("transform", "rotate(-90)")
-		.style("font-size","15px")
+		.style("font-size","16px")
 		.text("US Millions")
 		.style('fill', titles_color);
 	
@@ -92,12 +92,12 @@ function stacked_bar_fn(file) {
 
 		xAxis.call(d3.axisBottom(x)
 					.tickValues(x.domain()
-								.filter(function(d, i){ return !(i % 10)})
+								.filter(function(d, i){ return !(i % 11)})
 								)
 					)
 			.selectAll("text")
-			.attr('font-weight','bold')
-			.style("font-size","12px");
+			//.attr('font-weight','bold')
+			.style("font-size","16px");
 
 		// color palette = one color per subgroup
 		const color = d3.scaleOrdinal()
@@ -112,7 +112,7 @@ function stacked_bar_fn(file) {
 			.data(subgroups)
 			.enter()
 			.append("circle")
-			.attr("cx", 325)
+			.attr("cx", 310)
 			.attr("cy", function(d, i) { return 10 + i * 25 }) 
 			// 325 is where the first dot appears. 25 is the distance between dots
 			.attr("r", 5)
@@ -123,7 +123,7 @@ function stacked_bar_fn(file) {
 			.data(subgroups)
 			.enter()
 			.append("text")
-			.attr("x", 340)
+			.attr("x", 320)
 			.attr("y", function(d, i) { return 10 + i * 25})
 			// 340 is where the first label appears. 25 is the distance between dots
 			.style("fill", function(d){ return color(d)})
@@ -131,7 +131,7 @@ function stacked_bar_fn(file) {
 			.attr("text-anchor", "left")
 			.style("alignment-baseline", "middle")
 			.attr('font-weight','bold')
-			.style("font-size","15px");
+			.style("font-size","18px");
 
 		// Highlight a specific subgroup when hovered
 		var mouseover = function(d) {
@@ -175,7 +175,3 @@ function stacked_bar_fn(file) {
 }
 
 stacked_bar_fn('g11.csv')
-
-d3.select("#left")
-	.append("div")
-	.html(sourceHTML);
