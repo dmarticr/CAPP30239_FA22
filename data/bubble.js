@@ -97,20 +97,26 @@ d3.csv('rank.csv').then((data) => {
 	// Add a scale for bubble color
 	const myColor = d3.scaleOrdinal()
 		.domain(["No", "Yes"])
-		.range(["#72FFFF","#FF1700"]);
+		.range(["#F806CC","#00FFC6"]);
 
-	// -1- Create a tooltip div that is hidden by default:
-	const tooltip = d3.select("#bubble_chart")
+	// Create a tooltip div that is hidden by default:
+	const tooltip = d3.select("#aux")
 		.append("div")
 		.style("opacity", 0)
 		.attr("class", "tooltip")
-		.style('font-weight','bold');
+		.style('font-weight','bold')
+		.style("background-color", "black")
+		.style("border", "dashed")
+		.style("border-width", "1px")
+		.style("border-radius", "5px")
+		.style("padding", "0px")
+		.style("border-color", "white");
 		
-	// -2- Create to functions to show / hide the tooltip
+	// Create to functions to show / hide the tooltip
 	const showTooltip = function(event, d) {
 		tooltip
 			.transition()
-			.duration(150)
+			.duration(1000)
 		tooltip
 			.style("opacity", 1)
 			.html("<p>Rank: " + d.Rank 
@@ -118,7 +124,7 @@ d3.csv('rank.csv').then((data) => {
 				+ "<\p><p>Sales: $" + d.Sales + " mill."
 				+ "<\p><p>Publisher: " + d.Publisher
 				+ "<\p><p>Genre: " + d.Genre
-				+ "<\p><p>Developer: " + d.Developer + "<\p>")
+				+ "<\p><p>Developer: " + d.Developer + "<\p>");
 	}
 
 	const hideTooltip = function(event, d) {
@@ -137,9 +143,9 @@ d3.csv('rank.csv').then((data) => {
 		.attr("cy", d => y(d.Rank))
 		.attr("r", d => z(d.Sales))
 		.style("fill", d => myColor(d.Flag))
-		// -3- Trigger the functions
+		// Trigger the functions
 		.on("mouseover", showTooltip )
-		.on("mouseleave", hideTooltip )
+		//.on("mouseleave", hideTooltip )
 })
 
 d3.selectAll("#ref")
