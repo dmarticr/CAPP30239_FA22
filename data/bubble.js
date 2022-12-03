@@ -104,7 +104,7 @@ d3.csv('rank.csv').then((data) => {
 		.append("div")
 		.style("opacity", 0)
 		.attr("class", "tooltip")
-		.style('font-weight','bold')
+		//.style('font-weight','bold')
 		.style("background-color", "black")
 		.style("border", "dashed")
 		.style("border-width", "1px")
@@ -119,12 +119,12 @@ d3.csv('rank.csv').then((data) => {
 			.duration(1000)
 		tooltip
 			.style("opacity", 1)
-			.html("<p>Rank: " + d.Rank 
-				+ "<\p><p>Name: " + d.Name 
-				+ "<\p><p>Sales: $" + d.Sales + " mill."
-				+ "<\p><p>Publisher: " + d.Publisher
-				+ "<\p><p>Genre: " + d.Genre
-				+ "<\p><p>Developer: " + d.Developer + "<\p>");
+			.html("<p><b>Rank: " + d.Rank 
+				+ "</b></p><p><strong>Name</strong>: " + d.Name 
+				+ "</p><p><strong>Sales</strong>: $" + d.Sales + " mill."
+				+ "</p><p><strong>Publisher</strong>: " + d.Publisher
+				+ "</p><p><strong>Genre</strong>: " + d.Genre
+				+ "</p><p><strong>Developer</strong>: " + d.Developer + "<\p>");
 	}
 
 	const hideTooltip = function(event, d) {
@@ -145,7 +145,7 @@ d3.csv('rank.csv').then((data) => {
 		.style("fill", d => myColor(d.Flag))
 		// Trigger the functions
 		.on("mouseover", showTooltip )
-		//.on("mouseleave", hideTooltip )
+		//.on("mouseleave", hideTooltip ) // I want to maintain the tooltip visible
 })
 
 d3.selectAll("#ref")

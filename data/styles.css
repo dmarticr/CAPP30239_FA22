@@ -93,3 +93,12 @@ b {
 .bubbles:hover {
     stroke: white;
 }
+
+p.init:first-letter {
+	color: #B4AEE8;
+	font-size: 100px;
+	padding-right: 8px;
+	float:left;
+	line-height: 0.7;
+	font-family: 'Audiowide', cursive;
+}
