@@ -1,4 +1,4 @@
-let sourceHTML = `<p style="background-color:black; color: white; text-align:center">Data Source: <a href="https://www.vgchartz.com" target="_blank" rel="noopener noreferrer">VGChartz</a></p>`;
+let sourceHTML = `<p style="background-color:black; color: white; text-align:center"><i>Data Source: <a href="https://www.vgchartz.com" target="_blank" rel="noopener noreferrer">VGChartz</a></i></p>`;
 let color_palete = ["#F806CC","#FAEA48","#3330E4","#72FFFF","#FF8624","#9900F0","#00FFC6","#E8FFC2","#FF1700","#06FF00","#EEEEEE"]
 let titles_color =  '#B4AEE8'
 let color_button_chart = "#FF577F"

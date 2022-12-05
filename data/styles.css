@@ -140,6 +140,12 @@ p.pa {
 	margin-right: 35px;
 }
 
+i.pa {
+	color:black;
+	font-family: 'Inter', sans-serif;
+	background-color: #F5F5F5;
+}
+
 a.pa {
 	color:blue;
 	font-family: 'Inter', sans-serif;
