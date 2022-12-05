@@ -1,6 +1,6 @@
 ## Data for the Final Project 📝
 
-For my data project, I will use Video Game Sales from more than 20.000 games. This dataset has been taken from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales), being a scrape of [vgchartz](https://www.vgchartz.com/) using the code located on [data/vgchartzScrape-master](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgchartzScrape-master).
+For my data project, I will use Video Game Sales from more than 20.000 games. This dataset has been taken from [vgchartz](https://www.vgchartz.com/) using the code located on [data/vgchartzScrape-master](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgchartzScrape-master).
 
 Fields include
 * **Rank**: Ranking of overall sales
@@ -17,7 +17,7 @@ Fields include
 
 *Notes*:
 * The script to scrape the data is also available at [https://github.com/GregorUT/vgchartzScrape](https://github.com/GregorUT/vgchartzScrape) (I did some modifications because it was not running) and it is based on BeautifulSoup using Python.
-* The original dataset has 16,598 records, 2 records were dropped by their authors due to incomplete information.
+* The original dataset has 20.000 records, 497 records were dropped due to incomplete information.
 * In this folder there are other datasets from data exploration, located on [data/other_options](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/other_options) which include violence data from Colombia and animal shelter records. You can omit those.
 * This folder also includes the **3 Minute Overview** homework. Please refer to the file [3_minute_overview.pdf](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/3_minute_overview.pdf).
 * The original dataset is [vgsales.csv](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgsales.csv), and the resulting datasets after cleaning and summarizing data are:
