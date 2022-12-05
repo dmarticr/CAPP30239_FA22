@@ -18,7 +18,7 @@ function stacked_bar_fn(file) {
 	// set the dimensions and margins of the graph
 	const margin = {top: 30, right: 0, bottom: 45, left: 65},
 		width =  620 - margin.left - margin.right,
-		height = 550 - margin.top - margin.bottom;
+		height = 490 - margin.top - margin.bottom;
 
 	// append the svg object to the body of the page
 	const svg = d3.select("#stackedbar")
