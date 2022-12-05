@@ -1,6 +1,6 @@
 ## Data for the Final Project 📝
 
-For my data project, I will use Video Game Sales from more than 16,500 games. This dataset has been taken from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales), being a scrape of [vgchartz](https://www.vgchartz.com/) using the code located on [data/vgchartzScrape-master](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgchartzScrape-master).
+For my data project, I will use Video Game Sales from more than 20.000 games. This dataset has been taken from [Kaggle](https://www.kaggle.com/datasets/gregorut/videogamesales), being a scrape of [vgchartz](https://www.vgchartz.com/) using the code located on [data/vgchartzScrape-master](https://github.com/dmarticr/CAPP30239_FA22/tree/main/data/vgchartzScrape-master).
 
 Fields include
 * **Rank**: Ranking of overall sales
